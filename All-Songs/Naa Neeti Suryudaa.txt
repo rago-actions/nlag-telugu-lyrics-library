@@ -1,141 +1,107 @@
-[Title]
-నా నీతి సూర్యుడా
-Naa Neeti Suryudaa
+Title: Naa Neethi Suryuda
 
-[Intro]
-నా నీతి సూర్యుడా
-Naa neeti suryudaa
-
-భువినేలు యేసయ్యా
-bhuvinelu Yesayyaa
-
-సరిపోల్చలేను నీతో
-Saripolchalenu neeto
-
-ఘనులైన వారిని
-ghanulaina vaarini
-
-[Chorus]
-రాజులకే మహరాజువు
-Raajulake mahaaraajuvu
-
+నా నీతి సూర్యుడా 
+Naa Neethi Suryuda
+భువినేలు యేసయ్యా 
+Bhuvinelu Yesayya
+సరిపోల్చలేను నీతో   
+Saripolchalenu Neetho
+ఘనులైనవారిని 
+Ghanulaina Vaarini    
+రాజులకే మహరాజువు 
+Raajulake Maha Raaraajuvu
 కృపచూపే దేవుడవు
-krupachupe devudavu
-
-నడిపించే నజరేయుడా
-Nadipinche Najareyudaa
-
+Krupachupe Dhevudavu
+నడిపించే నజరేయుడా 
+Nadipinche Najareyudaa 
 కాపాడే కాపరివి
-kaapaade kaaparivi
+Kaapaade Kaaparivi 
 
 [Verse 1]
-శ్రమలలో బహు శ్రమలలో
-Sramalalo bahu sramalalo
-
+శ్రమలలో బహుశ్రమలలో  
+Sramalalo Bahu Sramalalo 
 ఆదరణ కలిగించెను
-aadarana kaliginchenu
-
-వాక్యమే కృపా వాక్యమే
-Vaakyame krupaa vaakyame
-
+Aadarana Kaliginchenu
+వాక్యమే కృపావాక్యమే   
+Vaakyame Krupa Vaakyame 
 నను వీడని అనుబంధమై
-nanu veedani anubandhamai
-
-నీ మాటలే జల ధారాలై
-Nee maatale jala dhaaraalai
-
-సంతృప్తి నిచ్చెను
-santrupti nicchenu
-
-నీ మాటలే ఔషధమై
-Nee maatale oushadhamai
-
+Nanu Veedani Anubandhamai 
+నీ మాటలే జలధారలై - 
+Nee Maatale Jaladhaaralai 
+సంతృప్తినిచ్చెను
+Santhrupthinichhenu
+నీ మాటలే ఔషధమై 
+Nee Maatale Oushadhamai 
 గాయములు కట్టెను
-gaayamulu kattenu
+Gaayamulu Kattenu
+నీ మాటే మధురం             
+Nee Maate Madhuram
 
-నీ మాటే మధురమ్
-Nee maate madhuram
+
+
+రాజులకే మహరాజువు  
+Raajulake Maha Raaraajuvu 
+కృపచూపే దేవుడవు 
+Krupachupe Dhevudavu
+నడిపించే నజరేయుడా   
+Nadipinche Najareyudaa
+కాపాడే కాపరివి
+Kaapaade Kaaparivi 
 
 [Verse 2]
-మేలుకై సమస్తమును
-Melukai samastamunu
-
-జరిగించుచున్నావు నీవు
-jariginchuchunnaavu neevu
-
-ఏదియు కొదువ చేయవు
-Ediyu koduva cheyavu
-
-నిన్నాశ్రయించిన వారిని
-ninnaasrayinchina vaarini
-
-భీకరమైన కార్యములు
-Bheekaramaina kaaryamulu
-
-చేయుచున్నవాడ
-cheyuchunna vaada
-
-సజీవుడవై అధికస్తోత్రము
-Sajeevudavai adhikasthotramu
-
-పొందుచున్న వాడ
-ponduchunna vaada
-
+మేలుకై సమస్తమును 
+Melukai Samastamunu
+జరిగించుచున్నావు నీవు 
+Jariginchuchunnaavu Neevu
+ఏదియు కొదువచేయవు 
+Yediyu Kodhuva Cheyavu
+నిన్నాశ్రయించిన వారికి 
+Ninaasrayinchina Vaarini 
+భీకరమైన కార్యములు 
+Bheekaramaina Kaaryamulu 
+చేయుచున్నవాడా 
+Cheyuchunna Vaada
+సజీవుడవై అధికస్తోత్రము 
+Sajeevudavai Adhika Sthothramu 
+పొందుచున్నవాడా
+Ponduchunna Vaada
 ఘనపరతును నిన్నే
-Ghanaparathunu ninne
-
-ప్రేమించే యేసయ్యా
-Preminche Yesayyaa
-
-నీవుంటే చాలునయ
-neevunte chaalunaya
-
-నడిపించే నజరేయుడా
-Nadipinche Najareyudaa
-
-కాపాడే కాపరివి
-kaapaade kaaparivi
+Ghanaparathunu Ninne
+ప్రేమించే యేసయ్యా  
+Preminche Yesayya
+నీవుంటే చాలునయా 
+Neevunte Chaalunayya
+నడిపించే నజరేయుడా    
+Nadipinche Najareyuda 
+కాపాడే కాపరివి  
+Kaapaade Kaaparivi
 
 [Verse 3]
-సంఘమై నీ స్వాస్థ్యమై
-Sanghamai nee swaasthyamai
-
-నను నీయెదుట నిలపాలని
-nanu neeyeduta nilapaalani
-
-ఆత్మతో మహిమాత్మతో
-Aatmato mahimaatmato
-
-నను ముద్రించియున్నావు నీవు
-nanu mudrinchiyunnaavu neevu
-
-వరములతో ఫలములతో
-Varamulato phalamulato
-
+సంఘమై నీ స్వాస్థ్యమై 
+Sanghamai Nee Swaasthyamai 
+నను నీయెదుట నిలపాలని 
+Nanu Nee Yeduta Nilapaalani
+ఆత్మతో మహిమాత్మతో    
+Aathmatho Mahimaathmatho
+నను ముద్రించియున్నావు నీవు 
+Nanu Mudrinchiyunnavu Neevu
+వరములతో ఫలములతో 
+Varamulatho Phalamulatho 
 నీకై బ్రతకాలని
-neekai bratakaalani
-
-తుదిశ్వాశ నీసన్నిధిలో
-Tudisvaasha nee sannidhilo
-
-విజయం చూడాలని
-vijayam chudaalani
-
-ఆశతో వున్నానయ!
-Aashato vunnaanaya!
-
-కరుణించే యేసయ్యా
+Neekai Brathakaalani
+తుదిశ్వాస నీ సన్నిధిలో 
+Thudiswaasha Nee Sannidhilo 
+విజయంచూడాలని
+Vijayam Chudaalani..
+ఆశతో ఉన్నానయా
+Aashatho Vunnanaya
+కరుణించే యేసయ్యా 
 Karuninche Yesayyaa
-
 నీకోసమే నాజీవితం
-neekosame naajeevitham
-
-నినుచేరే ఆశయం తీరాలని
-Ninu chere aashayam theeralani
-
-నిను చూసే ఆక్షణం రావాలయ్యా
-ninu chuse aakshanam raavaalayyaa
-
-
+Neekosame Naajeevitam
+నిన్నుచేరే ఆశయం తీరాలయ్యా 
+Ninu Chere Aashayam Teeraalayya
+నిన్నుచూసే ఆక్షణం రావాలయ్యా      
+Ninu Chuse Aakshanam Raavaalayya
 
 
