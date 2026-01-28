@@ -143,10 +143,64 @@ header h1 {
     color: var(--primary-color);
 }
 
+/* Alphabet Index */
+.alphabet-index {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 2px 8px var(--shadow);
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.alphabet-btn {
+    min-width: 40px;
+    height: 40px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid var(--border);
+    background: var(--card-bg);
+    color: var(--text-primary);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.alphabet-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--shadow);
+}
+
+.alphabet-btn.active {
+    background: var(--gradient);
+    border-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 12px var(--shadow-hover);
+}
+
+.alphabet-btn.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.alphabet-btn.disabled:hover {
+    transform: none;
+    border-color: var(--border);
+    color: var(--text-secondary);
+}
+
 /* Cards Grid */
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     animation: fadeIn 0.8s ease-out;
 }
@@ -157,6 +211,21 @@ header h1 {
     height: 320px;
     cursor: pointer;
     animation: scaleIn 0.4s ease-out backwards;
+    position: relative;
+    z-index: 1;
+    transition: all 0.4s ease;
+}
+
+.card.flipped {
+    z-index: 100;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    max-width: 800px;
+    height: 85vh;
+    max-height: 700px;
 }
 
 .card:nth-child(1) {
@@ -193,6 +262,28 @@ header h1 {
 
 .card.flipped .card-inner {
     transform: rotateY(180deg);
+    width: 100%;
+    height: 100%;
+}
+
+/* Backdrop overlay when card is flipped */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+}
+
+.backdrop.active {
+    opacity: 1;
+    visibility: visible;
 }
 
 .card-front,
@@ -418,6 +509,18 @@ footer {
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+    .cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     .container {
         padding: 1rem;
@@ -432,12 +535,17 @@ footer {
     }
 
     .cards-grid {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
     }
 
     .card {
         height: 280px;
+    }
+
+    .card.flipped {
+        width: 95vw;
+        height: 90vh;
     }
 
     .card-front,
@@ -452,6 +560,17 @@ footer {
     .card-content {
         font-size: 0.85rem;
     }
+
+    .alphabet-index {
+        gap: 0.4rem;
+        padding: 1rem;
+    }
+
+    .alphabet-btn {
+        min-width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -461,5 +580,11 @@ footer {
 
     .cards-grid {
         grid-template-columns: 1fr;
+    }
+
+    .alphabet-btn {
+        min-width: 32px;
+        height: 32px;
+        font-size: 0.85rem;
     }
 }

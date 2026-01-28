@@ -1,6 +1,8 @@
 // Global state
 let allSongs = [];
 let filteredSongs = [];
+let selectedLetter = null;
+let backdrop = null;
 
 // Song data - mapping filenames to display names and content
 const songFiles = [
@@ -129,9 +131,19 @@ const icons = {
 
 // Initialize the app
 document.addEventListener('DOMContentLoaded', async () => {
+    createBackdrop();
     await loadSongs();
     setupEventListeners();
+    createAlphabetIndex();
 });
+
+// Create backdrop for expanded cards
+function createBackdrop() {
+    backdrop = document.createElement('div');
+    backdrop.className = 'backdrop';
+    backdrop.addEventListener('click', closeExpandedCard);
+    document.body.appendChild(backdrop);
+}
 
 // Load all songs
 async function loadSongs() {
@@ -185,18 +197,10 @@ async function loadSongContent(filename) {
     return await response.text();
 }
 
-// Format filename for display
+// Format filename for display - use original filename
 function formatDisplayName(filename) {
-    // Remove .txt extension
-    let name = filename.replace(/\.txt$/, '');
-
-    // Replace underscores and hyphens with spaces
-    name = name.replace(/[_-]/g, ' ');
-
-    // Trim extra spaces
-    name = name.trim();
-
-    return name;
+    // Remove .txt extension but keep the rest as is
+    return filename.replace(/\.txt$/, '');
 }
 
 // Determine content type
@@ -250,15 +254,39 @@ function renderCards() {
     `).join('');
 
     // Add click event to flip cards
-    document.querySelectorAll('.card').forEach(card => {
-        const cardInner = card.querySelector('.card-inner');
-        cardInner.addEventListener('click', (e) => {
+    document.querySelectorAll('.card').forEach((card, index) => {
+        card.addEventListener('click', (e) => {
             // Don't flip if clicking the close button
             if (!e.target.closest('.close-btn')) {
-                card.classList.toggle('flipped');
+                if (card.classList.contains('flipped')) {
+                    closeExpandedCard();
+                } else {
+                    expandCard(card);
+                }
             }
         });
     });
+}
+
+// Expand card
+function expandCard(card) {
+    // Close any other expanded card
+    closeExpandedCard();
+
+    // Expand this card
+    card.classList.add('flipped');
+    backdrop.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+// Close expanded card
+function closeExpandedCard() {
+    const expandedCard = document.querySelector('.card.flipped');
+    if (expandedCard) {
+        expandedCard.classList.remove('flipped');
+    }
+    backdrop.classList.remove('active');
+    document.body.style.overflow = '';
 }
 
 // Format content for display
@@ -276,10 +304,72 @@ function formatContent(content) {
 
 // Flip card function (for close button)
 function flipCard(index) {
-    const card = document.querySelector(`[data-index="${index}"]`);
-    if (card) {
-        card.classList.remove('flipped');
+    closeExpandedCard();
+}
+
+// Create alphabet index
+function createAlphabetIndex() {
+    const alphabetIndex = document.getElementById('alphabetIndex');
+    const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+
+    // Get first letters of all songs
+    const availableLetters = new Set(
+        allSongs.map(song => song.displayName.charAt(0).toUpperCase())
+    );
+
+    // Add "All" button
+    const allBtn = document.createElement('button');
+    allBtn.className = 'alphabet-btn active';
+    allBtn.textContent = 'All';
+    allBtn.setAttribute('data-letter', 'all');
+    allBtn.addEventListener('click', () => filterByLetter('all'));
+    alphabetIndex.appendChild(allBtn);
+
+    // Add letter buttons
+    alphabet.forEach(letter => {
+        const btn = document.createElement('button');
+        btn.className = 'alphabet-btn';
+        btn.textContent = letter;
+        btn.setAttribute('data-letter', letter);
+
+        // Disable if no songs start with this letter
+        if (!availableLetters.has(letter)) {
+            btn.classList.add('disabled');
+            btn.disabled = true;
+        } else {
+            btn.addEventListener('click', () => filterByLetter(letter));
+        }
+
+        alphabetIndex.appendChild(btn);
+    });
+}
+
+// Filter by letter
+function filterByLetter(letter) {
+    selectedLetter = letter;
+
+    // Update active button
+    document.querySelectorAll('.alphabet-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    document.querySelector(`[data-letter="${letter}"]`).classList.add('active');
+
+    // Clear search input
+    const searchInput = document.getElementById('searchInput');
+    searchInput.value = '';
+    document.getElementById('clearSearch').classList.remove('visible');
+
+    // Filter songs
+    if (letter === 'all') {
+        filteredSongs = [...allSongs];
+    } else {
+        filteredSongs = allSongs.filter(song =>
+            song.displayName.charAt(0).toUpperCase() === letter
+        );
     }
+
+    renderCards();
+    updateResultsCount();
 }
 
 // Setup event listeners
@@ -323,8 +413,23 @@ function setupEventListeners() {
 
 // Filter songs based on search query
 function filterSongs(query) {
+    // Reset letter filter when searching
+    if (query) {
+        selectedLetter = null;
+        document.querySelectorAll('.alphabet-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+    }
+
     if (!query) {
-        filteredSongs = [...allSongs];
+        // If no query, apply letter filter if one is selected
+        if (selectedLetter && selectedLetter !== 'all') {
+            filteredSongs = allSongs.filter(song =>
+                song.displayName.charAt(0).toUpperCase() === selectedLetter
+            );
+        } else {
+            filteredSongs = [...allSongs];
+        }
     } else {
         filteredSongs = allSongs.filter(song => {
             return song.displayName.toLowerCase().includes(query) ||
@@ -350,5 +455,13 @@ function updateResultsCount() {
     }
 }
 
-// Make flipCard available globally
+// Make functions available globally
 window.flipCard = flipCard;
+window.closeExpandedCard = closeExpandedCard;
+
+// Close card with Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeExpandedCard();
+    }
+});
