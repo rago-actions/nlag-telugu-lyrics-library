@@ -20,7 +20,7 @@
 }
 
 body {
-    font-family: 'Poppins', 'Noto Sans Telugu', sans-serif;
+    font-family: 'Anek Telugu', 'Poppins', sans-serif;
     background: var(--background);
     color: var(--text-primary);
     line-height: 1.6;
@@ -56,7 +56,7 @@ header h1 {
 .subtitle {
     font-size: 1.2rem;
     color: var(--text-secondary);
-    font-family: 'Noto Sans Telugu', sans-serif;
+    font-family: 'Anek Telugu', sans-serif;
     animation: fadeIn 0.8s ease-out;
 }
 
@@ -91,7 +91,7 @@ header h1 {
     border-radius: 50px;
     background: var(--card-bg);
     transition: all 0.3s ease;
-    font-family: 'Poppins', 'Noto Sans Telugu', sans-serif;
+    font-family: 'Anek Telugu', 'Poppins', sans-serif;
 }
 
 #searchInput:focus {
@@ -323,7 +323,11 @@ header h1 {
     font-size: 1.25rem;
     font-weight: 600;
     line-height: 1.4;
-    font-family: 'Noto Sans Telugu', 'Poppins', sans-serif;
+    font-family: 'Anek Telugu', 'Poppins', sans-serif;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
 }
 
 .card-back {
@@ -362,8 +366,13 @@ header h1 {
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--primary-color);
-    font-family: 'Noto Sans Telugu', 'Poppins', sans-serif;
+    font-family: 'Anek Telugu', 'Poppins', sans-serif;
     flex: 1;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    min-width: 0;
+    padding-right: 0.5rem;
 }
 
 .card-actions {
@@ -431,7 +440,7 @@ header h1 {
     line-height: 1.8;
     color: var(--text-primary);
     white-space: pre-wrap;
-    font-family: 'Noto Sans Telugu', 'Poppins', sans-serif;
+    font-family: 'Anek Telugu', 'Poppins', sans-serif;
 }
 
 /* No Results */
