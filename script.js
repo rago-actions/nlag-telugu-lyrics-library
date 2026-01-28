@@ -197,10 +197,21 @@ async function loadSongContent(filename) {
     return await response.text();
 }
 
-// Format filename for display - use original filename
+// Format filename for display - clean up the filename
 function formatDisplayName(filename) {
-    // Remove .txt extension but keep the rest as is
-    return filename.replace(/\.txt$/, '');
+    // Remove .txt extension
+    let name = filename.replace(/\.txt$/, '');
+
+    // Replace underscores and hyphens with spaces
+    name = name.replace(/[_-]/g, ' ');
+
+    // Clean up multiple spaces
+    name = name.replace(/\s+/g, ' ');
+
+    // Trim extra spaces
+    name = name.trim();
+
+    return name;
 }
 
 // Determine content type
