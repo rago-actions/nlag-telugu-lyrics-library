@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="te">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NLAG Telugu Lyrics Library</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>🎵 NLAG Telugu Lyrics Library</h1>
+            <p class="subtitle">తెలుగు క్రైస్తవ గీతాలు మరియు ఉపన్యాసాలు</p>
+        </header>
+
+        <div class="search-container">
+            <div class="search-wrapper">
+                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <input type="text" id="searchInput"
+                    placeholder="Search songs or sermons... / పాటలు లేదా ఉపన్యాసాలు శోధించండి..." autocomplete="off">
+                <button id="clearSearch" class="clear-btn" title="Clear search">×</button>
+            </div>
+            <div class="results-count">
+                <span id="resultsCount">Loading songs...</span>
+            </div>
+        </div>
+
+        <div id="cardsContainer" class="cards-grid">
+            <!-- Cards will be dynamically inserted here -->
+        </div>
+
+        <div id="noResults" class="no-results" style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+            </svg>
+            <h3>No results found</h3>
+            <p>Try a different search term</p>
+        </div>
+
+        <div id="loadingSpinner" class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Loading songs...</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 NLAG Telugu Lyrics Library | Made with ❤️</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
