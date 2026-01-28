@@ -2,6 +2,8 @@
 
 A beautiful, searchable static website for Telugu Christian songs and sermons with flippable card interface.
 
+🌐 **Live Site**: [https://rago-actions.github.io/nlag-telugu-lyrics-library/](https://rago-actions.github.io/nlag-telugu-lyrics-library/)
+
 ## Features
 
 ✨ **Modern UI Design**
@@ -14,11 +16,19 @@ A beautiful, searchable static website for Telugu Christian songs and sermons wi
 - Search works in both English and Telugu text
 - Clear search with one click
 
+🔤 **Alphabetical Index**
+- A-Z letter navigation to filter songs
+- Click any letter to see songs starting with that letter
+- Disabled letters are grayed out (no songs available)
+- "All" button to show all songs
+
 🎴 **Flippable Cards**
 - Click any card to flip and view full lyrics
-- Smooth 3D flip animations
-- Scrollable content on the back of cards
-- Click the × button to flip back
+- Cards expand to full screen with dark backdrop
+- Smooth 3D flip animations and scaling
+- Scrollable content for long lyrics
+- Click outside, press Escape, or click × to close
+- 4 cards per row layout (responsive on smaller screens)
 
 📱 **Fully Responsive**
 - Works perfectly on all screen sizes
@@ -67,15 +77,18 @@ php -S localhost:8000
 # Then open: http://localhost:8000
 ```
 
-### Option 3: Deploy to Web (Free Hosting)
+### Option 3: View Live Website
 
-#### Deploy to GitHub Pages
+🌐 **Live Website**: [https://rago-actions.github.io/nlag-telugu-lyrics-library/](https://rago-actions.github.io/nlag-telugu-lyrics-library/)
 
-1. Push this repository to GitHub
-2. Go to repository Settings → Pages
-3. Select branch: `main`, folder: `/root`
-4. Click Save
-5. Your site will be live at: `https://yourusername.github.io/nlag-telugu-lyrics-library/`
+#### Deploy to GitHub Pages (Already Deployed)
+
+This site is already live at: **https://rago-actions.github.io/nlag-telugu-lyrics-library/**
+
+To update the live site:
+1. Push changes to the `main` branch
+2. GitHub Pages will automatically rebuild
+3. Changes will be live in 1-2 minutes
 
 #### Deploy to Netlify
 
@@ -108,10 +121,11 @@ nlag-telugu-lyrics-library/
 
 ## Usage
 
-1. **Search**: Type in the search box to filter songs
-2. **View Lyrics**: Click any card to flip it and see the full lyrics
-3. **Close**: Click the × button or click the card again to flip back
-4. **Navigate**: Use your browser's back button to return
+1. **Browse by Letter**: Click any A-Z letter to filter songs starting with that letter
+2. **Search**: Type in the search box to filter songs by title or content
+3. **View Lyrics**: Click any card to expand it to full screen with complete lyrics
+4. **Close**: Click outside the card, press Escape key, or click the × button
+5. **Reset**: Click "All" to show all songs again
 
 ## Customization
 

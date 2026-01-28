@@ -245,7 +245,16 @@ function renderCards() {
                 <div class="card-back">
                     <div class="card-back-header">
                         <h3 class="card-back-title">${song.displayName}</h3>
-                        <button class="close-btn" onclick="flipCard(${index})" aria-label="Close">×</button>
+                        <div class="card-actions">
+                            <button class="copy-btn" onclick="copyToClipboard(${index})" aria-label="Copy lyrics">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                                <span class="copy-text">Copy</span>
+                            </button>
+                            <button class="close-btn" onclick="flipCard(${index})" aria-label="Close">×</button>
+                        </div>
                     </div>
                     <div class="card-content">${formatContent(song.content)}</div>
                 </div>
@@ -455,9 +464,65 @@ function updateResultsCount() {
     }
 }
 
+// Copy to clipboard function
+async function copyToClipboard(index) {
+    const song = filteredSongs[index];
+    const copyBtn = document.querySelector(`[data-index="${index}"] .copy-btn`);
+    const copyText = copyBtn.querySelector('.copy-text');
+
+    try {
+        await navigator.clipboard.writeText(song.content);
+
+        // Show success feedback
+        copyBtn.classList.add('copied');
+        copyText.textContent = 'Copied!';
+
+        // Reset after 2 seconds
+        setTimeout(() => {
+            copyBtn.classList.remove('copied');
+            copyText.textContent = 'Copy';
+        }, 2000);
+    } catch (err) {
+        console.error('Failed to copy:', err);
+
+        // Fallback for older browsers
+        fallbackCopy(song.content, copyBtn, copyText);
+    }
+}
+
+// Fallback copy method for older browsers
+function fallbackCopy(text, copyBtn, copyText) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-9999px';
+    document.body.appendChild(textArea);
+    textArea.select();
+
+    try {
+        document.execCommand('copy');
+        copyBtn.classList.add('copied');
+        copyText.textContent = 'Copied!';
+
+        setTimeout(() => {
+            copyBtn.classList.remove('copied');
+            copyText.textContent = 'Copy';
+        }, 2000);
+    } catch (err) {
+        console.error('Fallback copy failed:', err);
+        copyText.textContent = 'Failed';
+        setTimeout(() => {
+            copyText.textContent = 'Copy';
+        }, 2000);
+    }
+
+    document.body.removeChild(textArea);
+}
+
 // Make functions available globally
 window.flipCard = flipCard;
 window.closeExpandedCard = closeExpandedCard;
+window.copyToClipboard = copyToClipboard;
 
 // Close card with Escape key
 document.addEventListener('keydown', (e) => {
