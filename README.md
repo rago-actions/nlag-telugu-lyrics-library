@@ -1,4 +1,4 @@
-# 🎵 NLAG Telugu Lyrics Library
+# 🎵 Joey Telugu Lyrics Library
 
 A beautiful, searchable static website for Telugu Christian songs and sermons with flippable card interface.
 
@@ -175,11 +175,11 @@ const icons = {
 
 ## License
 
-This project is created for NLAG Telugu Lyrics Library.
+This project is created for Joey Telugu Lyrics Library.
 
 ## Credits
 
-Made with ❤️ for the NLAG community
+Made with ❤️ for the Joey community
 
 ---
 
