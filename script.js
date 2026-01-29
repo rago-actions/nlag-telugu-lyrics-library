@@ -4,7 +4,7 @@ let filteredSongs = [];
 let selectedLetter = null;
 let backdrop = null;
 
-// Song data - mapping filenames to display names and content
+// Song data - mapping filenames to display names and content (matches All-Songs directory)
 const songFiles = [
     "ADONAI ENGLISH",
     "ADONAI SUROYADAYAMU",
@@ -23,7 +23,6 @@ const songFiles = [
     "Asaadhyamainadi Lene Ledu",
     "Ashirwadam",
     "Athyunnata Simhasanamu Pai",
-    "Bandheenaipoya",
     "Bangaram Adagaledu",
     "Bhaasillenu Siluvalo",
     "Bhayamu ledu (YAHWEH )",
