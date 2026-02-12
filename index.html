@@ -9,60 +9,61 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <h1>🎵 Joey Telugu Lyrics Library</h1>
-            <p class="subtitle">తెలుగు క్రైస్తవ గీతాలు మరియు ఉపన్యాసాలు</p>
+    <div class="page">
+        <header class="hero">
+            <div class="hero-bg" aria-hidden="true"></div>
+            <div class="hero-content">
+                <p class="hero-label">తెలుగు క్రైస్తవ గీతాలు</p>
+                <h1 class="hero-title">Joey Telugu<br>Lyrics Library</h1>
+                <p class="hero-subtitle">Songs & sermons at your fingertips</p>
+            </div>
         </header>
 
-        <div class="search-container">
-            <div class="search-wrapper">
-                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <path d="m21 21-4.35-4.35"></path>
-                </svg>
-                <input type="text" id="searchInput"
-                    placeholder="Search songs or sermons... / పాటలు లేదా ఉపన్యాసాలు శోధించండి..." autocomplete="off">
-                <button id="clearSearch" class="clear-btn" title="Clear search">×</button>
+        <main class="main">
+            <div class="toolbar">
+                <div class="search-wrapper">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="text" id="searchInput"
+                        placeholder="Search songs or sermons..." autocomplete="off">
+                    <button id="clearSearch" class="clear-btn" title="Clear search">×</button>
+                </div>
+                <div class="results-count">
+                    <span id="resultsCount">Loading songs...</span>
+                </div>
+                <nav class="alphabet-index" id="alphabetIndex" aria-label="Filter by first letter">
+                    <!-- Alphabet buttons inserted by script -->
+                </nav>
             </div>
-            <div class="results-count">
-                <span id="resultsCount">Loading songs...</span>
+
+            <div id="cardsContainer" class="cards-grid">
+                <!-- Cards inserted by script -->
             </div>
-        </div>
 
-        <div class="alphabet-index" id="alphabetIndex">
-            <!-- Alphabet buttons will be inserted here -->
-        </div>
+            <div id="noResults" class="no-results" style="display: none;">
+                <span class="no-results-icon">♪</span>
+                <h3>No results found</h3>
+                <p>Try another search or choose a letter above</p>
+            </div>
 
-        <div id="cardsContainer" class="cards-grid">
-            <!-- Cards will be dynamically inserted here -->
-        </div>
+            <div id="loadingSpinner" class="loading-spinner">
+                <div class="spinner"></div>
+                <p>Loading songs...</p>
+            </div>
+        </main>
 
-        <div id="noResults" class="no-results" style="display: none;">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2">
-                <circle cx="11" cy="11" r="8"></circle>
-                <path d="m21 21-4.35-4.35"></path>
-            </svg>
-            <h3>No results found</h3>
-            <p>Try a different search term</p>
-        </div>
-
-        <div id="loadingSpinner" class="loading-spinner">
-            <div class="spinner"></div>
-            <p>Loading songs...</p>
-        </div>
+        <footer class="site-footer">
+            <p>Joey Telugu Lyrics Library · Made with care</p>
+        </footer>
     </div>
-
-    <footer>
-        <p>&copy; 2026 Joey Telugu Lyrics Library | Made with ❤️</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>

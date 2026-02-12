@@ -244,10 +244,10 @@ function renderCards() {
     noResults.style.display = 'none';
 
     cardsContainer.innerHTML = filteredSongs.map((song, index) => `
-        <div class="card" data-index="${index}">
+        <div class="card card--${song.type}" data-index="${index}" data-type="${song.type}">
             <div class="card-inner">
                 <div class="card-front">
-                    <div class="card-icon">${song.icon}</div>
+                    <span class="card-icon" aria-hidden="true">${song.icon}</span>
                     <h3 class="card-title">${song.displayName}</h3>
                 </div>
                 <div class="card-back">
@@ -416,12 +416,12 @@ function setupEventListeners() {
         searchInput.focus();
     });
 
-    // Enter key to focus first card
+    // Enter key: expand first card
     searchInput.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' && filteredSongs.length > 0) {
             const firstCard = document.querySelector('.card');
             if (firstCard) {
-                firstCard.classList.add('flipped');
+                expandCard(firstCard);
                 firstCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
         }
