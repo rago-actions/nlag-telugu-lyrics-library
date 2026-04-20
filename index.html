@@ -4,39 +4,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joey Telugu Lyrics Library</title>
+
+    <!-- Primary Meta Tags -->
+    <title>Joey Telugu Lyrics Library - Telugu Christian Songs & Lyrics</title>
+    <meta name="title" content="Joey Telugu Lyrics Library - Telugu Christian Songs & Lyrics">
+    <meta name="description" content="Comprehensive collection of Telugu Christian songs with lyrics and transliteration. Search, bookmark, and share your favorite worship songs, prayers, and hymns.">
+    <meta name="keywords" content="Telugu Christian songs, Telugu lyrics, Christian worship, Telugu hymns, Telugu praise songs, తెలుగు క్రైస్తవ పాటలు">
+    <meta name="author" content="Joey Telugu Lyrics Library">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rago-actions.github.io/nlag-telugu-lyrics-library/">
+    <meta property="og:title" content="Joey Telugu Lyrics Library - Telugu Christian Songs & Lyrics">
+    <meta property="og:description" content="Comprehensive collection of Telugu Christian songs with lyrics and transliteration. Search, bookmark, and share your favorite worship songs.">
+    <meta property="og:image" content="https://rago-actions.github.io/nlag-telugu-lyrics-library/og-image.png">
+    <meta property="og:locale" content="te_IN">
+    <meta property="og:site_name" content="Joey Telugu Lyrics Library">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://rago-actions.github.io/nlag-telugu-lyrics-library/">
+    <meta property="twitter:title" content="Joey Telugu Lyrics Library - Telugu Christian Songs">
+    <meta property="twitter:description" content="Comprehensive collection of Telugu Christian songs with lyrics and transliteration.">
+    <meta property="twitter:image" content="https://rago-actions.github.io/nlag-telugu-lyrics-library/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎵</text></svg>">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://rago-actions.github.io/nlag-telugu-lyrics-library/">
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Joey Telugu Lyrics Library",
+      "description": "Comprehensive collection of Telugu Christian songs with lyrics and transliteration",
+      "url": "https://rago-actions.github.io/nlag-telugu-lyrics-library/",
+      "inLanguage": "te",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://rago-actions.github.io/nlag-telugu-lyrics-library/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#c9a227">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 </head>
 
-<body>
+<body data-theme="dark">
     <div class="page">
-        <header class="hero">
+        <header class="hero" role="banner">
             <div class="hero-bg" aria-hidden="true"></div>
             <div class="hero-content">
-                <p class="hero-label">తెలుగు క్రైస్తవ గీతాలు</p>
+                <p class="hero-label" lang="te">తెలుగు క్రైస్తవ గీతాలు</p>
                 <h1 class="hero-title">Joey Telugu<br>Lyrics Library</h1>
                 <p class="hero-subtitle">Songs & sermons at your fingertips</p>
             </div>
         </header>
 
-        <main class="main">
-            <div class="toolbar">
+        <main class="main" role="main">
+            <div class="toolbar" role="search">
                 <div class="search-wrapper">
                     <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        aria-hidden="true">
                         <circle cx="11" cy="11" r="8"></circle>
                         <path d="m21 21-4.35-4.35"></path>
                     </svg>
-                    <input type="text" id="searchInput"
-                        placeholder="Search songs or sermons..." autocomplete="off">
-                    <button id="clearSearch" class="clear-btn" title="Clear search">×</button>
+                    <input type="search"
+                           id="searchInput"
+                           placeholder="Search songs or sermons..."
+                           autocomplete="off"
+                           aria-label="Search songs"
+                           role="searchbox">
+                    <button id="clearSearch"
+                            class="clear-btn"
+                            title="Clear search"
+                            aria-label="Clear search">×</button>
                 </div>
-                <div class="results-count">
+                <div class="results-count" role="status" aria-live="polite">
                     <span id="resultsCount">Loading songs...</span>
                 </div>
                 <nav class="alphabet-index" id="alphabetIndex" aria-label="Filter by first letter">
@@ -44,24 +106,24 @@
                 </nav>
             </div>
 
-            <div id="cardsContainer" class="cards-grid">
+            <div id="cardsContainer" class="cards-grid" role="list" aria-label="Songs list">
                 <!-- Cards inserted by script -->
             </div>
 
-            <div id="noResults" class="no-results" style="display: none;">
-                <span class="no-results-icon">♪</span>
+            <div id="noResults" class="no-results" style="display: none;" role="status" aria-live="polite">
+                <span class="no-results-icon" aria-hidden="true">♪</span>
                 <h3>No results found</h3>
                 <p>Try another search or choose a letter above</p>
             </div>
 
-            <div id="loadingSpinner" class="loading-spinner">
-                <div class="spinner"></div>
+            <div id="loadingSpinner" class="loading-spinner" role="status" aria-live="polite">
+                <div class="spinner" aria-hidden="true"></div>
                 <p>Loading songs...</p>
             </div>
         </main>
 
-        <footer class="site-footer">
-            <p>Joey Telugu Lyrics Library · Made with care</p>
+        <footer class="site-footer" role="contentinfo">
+            <p>Joey Telugu Lyrics Library · Made with care · <a href="https://github.com/rago-actions/nlag-telugu-lyrics-library" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">View on GitHub</a></p>
         </footer>
     </div>
 

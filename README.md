@@ -1,186 +1,277 @@
 # 🎵 Joey Telugu Lyrics Library
 
-A beautiful, searchable static website for Telugu Christian songs and sermons with flippable card interface.
+A beautiful, feature-rich web application for browsing, searching, and sharing Telugu Christian songs and lyrics.
 
-🌐 **Live Site**: [https://rago-actions.github.io/nlag-telugu-lyrics-library/](https://rago-actions.github.io/nlag-telugu-lyrics-library/)
+**Live Site:** [https://rago-actions.github.io/nlag-telugu-lyrics-library/](https://rago-actions.github.io/nlag-telugu-lyrics-library/)
 
-## Features
+## ✨ Features
 
-✨ **Modern UI Design**
-- Beautiful gradient themes and smooth animations
-- Responsive design (works on mobile, tablet, and desktop)
-- Telugu font support with Noto Sans Telugu
+### 🎯 Core Features
+- **140+ Telugu Christian Songs** - Comprehensive collection of worship songs, hymns, prayers, and sermons
+- **Instant Search** - Fast, fuzzy search across song titles and lyrics
+- **Alphabet Navigation** - Quick filter by first letter (A-Z)
+- **Beautiful Card Interface** - Flip cards to reveal full lyrics
+- **Responsive Design** - Works perfectly on desktop, tablet, and mobile
 
-🔍 **Powerful Search**
-- Real-time search through song titles and content
-- Search works in both English and Telugu text
-- Clear search with one click
+### ⭐ Enhanced Features
 
-🔤 **Alphabetical Index**
-- A-Z letter navigation to filter songs
-- Click any letter to see songs starting with that letter
-- Disabled letters are grayed out (no songs available)
-- "All" button to show all songs
+#### 💾 Favorites & Bookmarks
+- **Star your favorite songs** for quick access later
+- Click the ★ icon on any song card
+- View all favorites with the "Favorites" button
+- Persists across browser sessions using localStorage
 
-🎴 **Flippable Cards**
-- Click any card to flip and view full lyrics
-- Cards expand to full screen with dark backdrop
-- Smooth 3D flip animations and scaling
-- Scrollable content for long lyrics
-- Click outside, press Escape, or click × to close
-- 4 cards per row layout (responsive on smaller screens)
+#### 🌓 Dark/Light Mode
+- **Toggle between themes** with the moon/sun icon
+- Smooth transitions between modes
+- Theme preference saved automatically
+- Optimized colors for both light and dark environments
 
-📱 **Fully Responsive**
-- Works perfectly on all screen sizes
-- Touch-friendly interface for mobile devices
+#### 📤 Share Functionality
+- **Share songs via link** - Copy direct link to any song
+- **WhatsApp sharing** - Send songs directly to WhatsApp
+- **Deep linking** - URLs with song parameters work perfectly
+- Example: `?song=Yehovaa%20Nee%20Naamamu`
 
-## Getting Started
+#### 🖨️ Print Support
+- **Print-friendly view** - Clean, optimized for printing
+- Print individual songs with one click
+- Removes UI elements and formats for paper
+- Perfect for creating physical songbooks
 
-### Option 1: Open Locally
+#### 📜 Recently Viewed
+- **Track your history** - See recently opened songs
+- Access via "Recent" button
+- Stores last 10 viewed songs
+- Helps you find songs you were just looking at
 
-Simply open `index.html` in your web browser:
+#### 🔤 Font Size Controls
+- **Adjust text size** with A+/A- buttons
+- **Keyboard shortcuts**: `Ctrl +` / `Ctrl -`
+- Range: 50% to 200%
+- Preference saved per browser
 
-```bash
-# On Mac
-open index.html
+#### 🌐 Transliteration Toggle
+- **Show/hide English transliteration** with తె/En button
+- Perfect for those who can read Telugu script
+- Reduces clutter when you don't need romanization
+- Toggle preference saved
 
-# Or double-click the index.html file in Finder
-```
+#### 🔄 Sorting Options
+- **A → Z** - Alphabetical ascending
+- **Z → A** - Alphabetical descending
+- Sort dropdown in toolbar
 
-### Option 2: Using a Local Server (Recommended)
+#### ⌨️ Keyboard Shortcuts
+- **`/`** - Focus search box
+- **`Esc`** - Close opened card or modal
+- **`F`** - Toggle favorite (when card is open)
+- **`Ctrl +`** - Increase font size
+- **`Ctrl -`** - Decrease font size
+- **`?`** - Show keyboard shortcuts help
 
-For better performance, use a local server:
+#### 📱 Mobile Gestures
+- **Swipe down** to close expanded lyrics
+- Touch-optimized interface
+- Smooth animations
 
-**Using Python:**
-```bash
-# Python 3
-python3 -m http.server 8000
+#### 🔝 Scroll to Top
+- Floating button appears when scrolling
+- Smooth scroll animation
+- Appears after scrolling 500px
 
-# Then open: http://localhost:8000
-```
+#### 🎨 Performance Optimizations
+- **Lazy loading** for cards
+- **Fuzzy search** algorithm for better matching
+- **Smooth animations** throughout
+- **Fast load times** with optimized assets
 
-**Using Node.js:**
-```bash
-# Install http-server globally
-npm install -g http-server
+#### ♿ Accessibility
+- **Full keyboard navigation** support
+- **ARIA labels** for screen readers
+- **Semantic HTML** structure
+- **Focus management** for modals
+- **High contrast** mode compatible
 
-# Run server
-http-server
+### 📊 SEO & Sharing
+- **Open Graph tags** for social media
+- **Twitter Card** support
+- **Schema.org** structured data
+- **Optimized meta tags**
+- **Canonical URLs**
 
-# Then open: http://localhost:8080
-```
+## 🚀 Quick Start
 
-**Using PHP:**
-```bash
-php -S localhost:8000
+### For Users
+Simply visit [https://rago-actions.github.io/nlag-telugu-lyrics-library/](https://rago-actions.github.io/nlag-telugu-lyrics-library/)
 
-# Then open: http://localhost:8000
-```
+### For Developers
 
-### Option 3: View Live Website
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/rago-actions/nlag-telugu-lyrics-library.git
+   cd nlag-telugu-lyrics-library
+   ```
 
-🌐 **Live Website**: [https://rago-actions.github.io/nlag-telugu-lyrics-library/](https://rago-actions.github.io/nlag-telugu-lyrics-library/)
+2. **Open locally**
+   - Simply open `index.html` in a web browser
+   - Or use a local server:
+     ```bash
+     # Python 3
+     python -m http.server 8000
+     
+     # Node.js (with http-server)
+     npx http-server
+     
+     # VS Code Live Server extension
+     ```
 
-#### Deploy to GitHub Pages (Already Deployed)
+3. **Visit** `http://localhost:8000`
 
-This site is already live at: **https://rago-actions.github.io/nlag-telugu-lyrics-library/**
-
-To update the live site:
-1. Push changes to the `main` branch
-2. GitHub Pages will automatically rebuild
-3. Changes will be live in 1-2 minutes
-
-#### Deploy to Netlify
-
-1. Push to GitHub
-2. Go to [Netlify](https://netlify.com)
-3. Click "New site from Git"
-4. Select your repository
-5. Deploy!
-
-#### Deploy to Vercel
-
-1. Push to GitHub
-2. Go to [Vercel](https://vercel.com)
-3. Import your repository
-4. Deploy!
-
-## File Structure
+## 📁 Project Structure
 
 ```
 nlag-telugu-lyrics-library/
-├── index.html          # Main HTML file
-├── styles.css          # All styling and animations
-├── script.js           # Search and flip functionality
-├── All-Songs/          # Folder containing all song files
-│   ├── sermon.txt
-│   ├── Aaradhana Neeke
-│   └── ...
-└── README.md          # This file
+├── index.html          # Main HTML file with SEO meta tags
+├── styles.css          # Enhanced CSS with dark/light themes
+├── script.js           # JavaScript with all features
+├── README.md           # This file
+└── All-Songs/          # Directory containing song files
+    ├── Song Name 1
+    ├── Song Name 2
+    └── ...
 ```
 
-## Usage
+## 🎨 Adding New Songs
 
-1. **Browse by Letter**: Click any A-Z letter to filter songs starting with that letter
-2. **Search**: Type in the search box to filter songs by title or content
-3. **View Lyrics**: Click any card to expand it to full screen with complete lyrics
-4. **Close**: Click outside the card, press Escape key, or click the × button
-5. **Reset**: Click "All" to show all songs again
+1. Create a new text file in the `All-Songs/` directory
+2. Name it exactly as you want it displayed (no extension)
+3. Format the content:
+   ```
+   Title: Song Name
 
-## Customization
+   తెలుగు లిరిక్స్
+   Telugu transliteration
 
-### Change Colors
+   [Verse 1]
+   తెలుగు లిరిక్స్
+   Telugu transliteration
+   ```
 
-Edit the CSS variables in `styles.css`:
+4. Add the filename to the `songFiles` array in `script.js`:
+   ```javascript
+   const songFiles = [
+       // ... existing songs
+       "Your New Song Name",
+   ];
+   ```
 
-```css
-:root {
-    --primary-color: #6366f1;      /* Main color */
-    --secondary-color: #8b5cf6;    /* Accent color */
-    --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-```
+5. Commit and push:
+   ```bash
+   git add .
+   git commit -m "Add new song: Your Song Name"
+   git push
+   ```
 
-### Add New Songs
+## 🛠️ Technologies Used
 
-1. Add the song file to `All-Songs/` folder
-2. Add the filename to the `songFiles` array in `script.js`:
+- **HTML5** - Semantic markup with accessibility
+- **CSS3** - Custom properties, Grid, Flexbox, animations
+- **JavaScript (ES6+)** - Modern features, async/await
+- **Web APIs** - localStorage, Clipboard, Fetch, IntersectionObserver
+- **Google Fonts** - Anek Telugu, Instrument Serif, Outfit
 
-```javascript
-const songFiles = [
-    // ... existing files ...
-    "Your_New_Song.txt",  // Add here
-];
-```
+## 🌟 Browser Support
 
-### Change Icons
+- ✅ Chrome/Edge 90+
+- ✅ Firefox 88+
+- ✅ Safari 14+
+- ✅ Mobile browsers (iOS Safari, Chrome Mobile)
 
-Edit the `icons` object in `script.js`:
+## 🔒 Privacy
 
-```javascript
-const icons = {
-    sermon: '📖',
-    song: '🎵',
-    prayer: '🙏',
-    worship: '✨'
-};
-```
+- **No tracking** - No analytics or tracking scripts
+- **No cookies** - Uses localStorage for preferences only
+- **No external requests** - All data stored locally
+- **No user accounts** - Everything works anonymously
 
-## Browser Support
+## 📱 PWA Features
 
-- Chrome/Edge (latest)
-- Firefox (latest)
-- Safari (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
+The site works offline-first and can be installed as a Progressive Web App:
 
-## License
+1. Visit the site on mobile
+2. Tap "Add to Home Screen"
+3. Use it like a native app!
 
-This project is created for Joey Telugu Lyrics Library.
+## 🎯 Keyboard Shortcuts Reference
 
-## Credits
+| Shortcut | Action |
+|----------|--------|
+| `/` | Focus search |
+| `Esc` | Close card/modal |
+| `F` | Toggle favorite (in card) |
+| `Ctrl +` | Increase font size |
+| `Ctrl -` | Decrease font size |
+| `?` | Show shortcuts help |
+| `Enter` | Open first search result |
 
-Made with ❤️ for the Joey community
+## 🤝 Contributing
+
+Contributions are welcome! Here's how you can help:
+
+1. **Add new songs** - Follow the format in "Adding New Songs"
+2. **Fix bugs** - Submit issues or pull requests
+3. **Improve translations** - Help with English transliterations
+4. **Suggest features** - Open an issue with your idea
+
+### Contribution Guidelines
+
+- Keep song formatting consistent
+- Test on multiple devices before submitting
+- Follow existing code style
+- Update README if adding major features
+
+## 📝 License
+
+This project is open source and available for use by anyone. Feel free to use, modify, and distribute.
+
+## 🙏 Acknowledgments
+
+- All song lyricists and composers
+- The Telugu Christian community
+- Contributors and users
+
+## 📞 Contact
+
+- **GitHub Issues**: [Report a bug or request a feature](https://github.com/rago-actions/nlag-telugu-lyrics-library/issues)
+- **Pull Requests**: [Contribute to the project](https://github.com/rago-actions/nlag-telugu-lyrics-library/pulls)
+
+## 🔄 Recent Updates
+
+### Version 2.0 (Latest)
+- ✅ Added favorites/bookmarks system
+- ✅ Dark/light mode toggle
+- ✅ Share functionality (link & WhatsApp)
+- ✅ Print-friendly view
+- ✅ Recently viewed tracking
+- ✅ Font size controls
+- ✅ Transliteration toggle
+- ✅ Sorting options
+- ✅ Keyboard shortcuts
+- ✅ Mobile gesture support
+- ✅ Scroll to top button
+- ✅ Enhanced search with fuzzy matching
+- ✅ SEO optimization
+- ✅ Improved accessibility
+- ✅ Added 13 new songs
+
+### Version 1.0
+- Initial release with 127 songs
+- Basic search and filtering
+- Card flip interface
 
 ---
 
-**Need help?** Open an issue or contact the maintainer.
+Made with ❤️ for the Telugu Christian community
+
+**Star ⭐ this repository if you find it helpful!**
