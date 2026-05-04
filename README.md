@@ -7,7 +7,7 @@ A beautiful, feature-rich web application for browsing, searching, and sharing T
 ## ✨ Features
 
 ### 🎯 Core Features
-- **140+ Telugu Christian Songs** - Comprehensive collection of worship songs, hymns, prayers, and sermons
+- **142 Telugu Christian Songs** - Comprehensive collection of worship songs, hymns, prayers, and sermons
 - **Instant Search** - Fast, fuzzy search across song titles and lyrics
 - **Alphabet Navigation** - Quick filter by first letter (A-Z)
 - **Beautiful Card Interface** - Flip cards to reveal full lyrics
